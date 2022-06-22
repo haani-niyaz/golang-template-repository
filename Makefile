@@ -6,7 +6,7 @@ DOCKER_REPO := rog-golang-buddies/template
 DOCKER_TAG := latest
 APP_NAME:= golang-buddies
 
-help: 
+help:
 	@echo 'Usage: make <OPTIONS> ... <TARGETS> <ARGUMENTS>'
 	@echo ''
 	@echo 'Available targets are:'
@@ -17,48 +17,48 @@ help:
 
 
 .PHONY: download
-## download: Downloads the dependencies	
-download: 
+## download: Downloads the dependencies
+download:
 	@go mod download
 
 .PHONY: tidy
 ## tidy: Cleans up go.mod and go.sum
-tidy: 
+tidy:
 	@go mod tidy
 
 .PHONY: fmt
 ## fmt: Formats all code with go fmt
-fmt: 
+fmt:
 	@go fmt ./...
 
 .PHONY: run
 ## run: Runs the app
-run: fmt 
+run: fmt
 	@go run --race cmd/main.go
 
 .PHONY: test-build
 ## test-build: Tests if code compiles
-test-build: 
+test-build:
 	@go build -o /dev/null ./...
 
 .PHONY: build
 ## build: Builds binary
-build: 	
+build:
 	@mkdir -pv bin && go build -ldflags="-w -s" -o bin/${APP_NAME} ./...
 
 .PHONY: test
 ## test: Runs all tests
-test: 
+test:
 	@go test ./... -v -coverpkg=./... -coverprofile cover.out
 	@go tool cover -func cover.out
 	@rm cover.out
 
 .PHONY: vet
 ## vet: Examines Go source code and reports suspicious constructs
-vet: 
+vet:
 	@go vet -v ./...
 
 .PHONY: docker
 ## docker-build: Builds docker image
-docker-build: 
+docker-build:
 	docker build ${ARGS}  -t  $(DOCKER_REPO):$(DOCKER_TAG) .
