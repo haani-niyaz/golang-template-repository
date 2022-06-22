@@ -4,7 +4,6 @@ PWD = $(shell pwd)
 # Vars
 DOCKER_REPO := rog-golang-buddies/template
 DOCKER_TAG := latest
-APP_NAME:= golang-buddies
 
 help:
 	@echo 'Usage: make <OPTIONS> ... <TARGETS> <ARGUMENTS>'
@@ -44,7 +43,7 @@ test-build:
 .PHONY: build
 ## build: Builds binary
 build:
-	@mkdir -pv bin && go build -ldflags="-w -s" -o bin/${APP_NAME} ./...
+	@mkdir -pv bin && go build -ldflags="-w -s" -o bin/app ./...
 
 .PHONY: test
 ## test: Runs all tests
