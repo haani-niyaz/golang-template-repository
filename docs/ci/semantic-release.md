@@ -32,7 +32,7 @@ The formalized convention is as follows for commit messages:
   └─⫸ Commit Type: build|ci|docs|feat|fix|perf|refactor|test
 ```
 
-### An example:
+### An example
 
 
 | Commit message                                                                                                                                                                                   | Release type               |
@@ -96,8 +96,6 @@ If you don't want to create a release and the steps above are one too many, you 
 git tag -a v0.1.0 -m "Pre-release"
 git push origin v0.1.0
 ```
-
-
 
 
 
