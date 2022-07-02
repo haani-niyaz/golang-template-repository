@@ -10,12 +10,23 @@ Raise security incidents early by detecting secret leaks and raising Github secu
 
 ## How
 
-The mechanism to detect secrets and protect (undo commit with secret) is described [here](https://github.com/zricethezav/gitleaks#commands).
+The mechanism to detect secrets and protect (undo commit with a secret) is described [here](https://github.com/zricethezav/gitleaks#commands).
 
-## Setup
+## CI setup
 
-A gitleaks workflow is configured to run a detect operation on the `main` branch and no further configuration is required.
+!!! summary
+
+    No configuration required.
+
+
+A `gitleaks detect` command is run via a gitleaks Github workflow in `.github/workflows/gitleaks.yml`.
 
 !!! info
 
-    The gitleaks github action requires a paid licensed therefore a custom workflow has been setup instead. It will fail the secret scan if secrets are detected and push alerts to Github security.
+    The [gitleaks Github action](https://github.com/marketplace/actions/gitleaks) has a paid license restriction, therefore a custom workflow has been setup instead. It will fail the secret scan if secrets are detected and push alerts to Github security.
+
+## Local setup
+
+!!! done
+
+    This is already configured for you via [pre-commit](pre-commit.md#local-setup).

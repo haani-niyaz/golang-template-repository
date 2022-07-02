@@ -4,7 +4,7 @@
 
 [semantic-release](https://github.com/semantic-release/semantic-release) automates the whole package release workflow including determining the next version number, generating the release notes, and publishing the package.
 
-semantic-release uses the commit messages to determine the consumer impact of changes in the codebase. Following formalized conventions for commit messages, semantic-release automatically determines the next semantic version number, generates a changelog and publishes the release.
+semantic-release uses the commit messages to determine the consumer impact of changes in the codebase. Following formalized conventions for commit messages, `semantic-release` automatically determines the next semantic version number, generates a changelog and publishes the release.
 
 ## Why
 
@@ -47,27 +47,11 @@ For a base version of `0.1.0`, the following will apply:
 | All others                | No version increment      |                                                                |
 
 
-## Setup
+## CI setup
 
-### Commitizen
+!!! warning
 
-Use [commitzen](https://commitizen-tools.github.io/commitizen/) to ease following the commit message convention.
-
-```
-pip install -U commitizen
-```
-
-For more installtion options see [here](https://commitizen-tools.github.io/commitizen/#installation).
-
-!!! info
-
-    Stage some files in your repo and type `cz commit` and you're ready to go!
-
-
-!!! tip
-
-    Decide on the commit convention scope in advance. This will keep it consistent and provide a coherent semantic mapping.
-
+    This section covers important implications of setting up a base tag/release version (or lack of) in your repo before using `semantic-release`.
 
 ### Base release version
 
@@ -97,6 +81,28 @@ If you don't want to create a release and the steps above are one too many, you 
 git tag -a v0.1.0 -m "Pre-release"
 git push origin v0.1.0
 ```
+
+## Local setup
+
+### Commitizen
+
+Use [commitzen](https://commitizen-tools.github.io/commitizen/) to ease following the commit message convention described [above](semantic-release.md#how).
+
+```
+pip install -U commitizen
+```
+
+For more installtion options see [here](https://commitizen-tools.github.io/commitizen/#installation).
+
+!!! info
+
+    Stage some files in your repo and type `cz commit` and you're ready to go!
+
+
+!!! tip
+
+    Decide on the commit convention scope in advance. This will keep it consistent and provide a coherent semantic mapping.
+
 
 ## FAQ
 
