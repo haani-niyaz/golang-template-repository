@@ -64,7 +64,7 @@ For more installtion options see [here](https://commitizen-tools.github.io/commi
 
 stage some files in your repo and type `cz commit` and you're ready to go!
 
-:round_pushpin: **TIP**
+📍 **TIP**
 
 > Decide on the commit convention scope in advance. This will keep it consistent and provide a coherent semantic mapping.
 
@@ -73,7 +73,7 @@ stage some files in your repo and type `cz commit` and you're ready to go!
 
 The CI is configured to run on the `main` branch and technically no further setup is required. However, `semantic-release` starts the version at `1.0.0` with pre-release options. This may still not be desireable for your project so few workarounds are desicribed below.
 
-:warning: You only need to action this once.
+⚠️ You only need to action this once.
 
 <u>In the Github repo page:</u>
 
