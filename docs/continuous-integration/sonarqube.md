@@ -1,7 +1,5 @@
 # Sonarqube
 
-# golangci-lint
-
 ## What
 
 ## Why

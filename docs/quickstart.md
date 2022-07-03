@@ -1,27 +1,28 @@
 # Quickstart
 
-The following instructions provide the setup required to optimally use this repository.
+Provides the CI setup and local development instructions to optimally use this repository.
 
-### Install developer tooling
+> 🚀 Instructions are distilled to get you started with the least amount of effort. Highly recommend reading background information for context in the provided links.
+
+
+### Install developer tools
 
  ```bash
- pip install --user pre-commit commitizen
+ pip install --user pre-commit commitizen mkdocs-material
  ```
-!!! tip
 
-       - For background on `pre-commit` please see [pre-commit](continuous-integration/pre-commit.md) for further details.
-       - For background on `commitizen` please see [commitizen](continuous-integration/semantic-release.md#commitizen) for further details.
+- For background on `pre-commit` please see [pre-commit](continuous-integration/pre-commit.md) for further details.
+- For background on `commitizen` please see [commitizen](continuous-integration/semantic-release.md#commitizen) for further details.
+- For background on `mkdocs-material` please see [mkdocs-material](continuous-integration/mkdocs-material.md) for further details.
 
 
 ### Setup base release for [semantic-release](continuous-integration/semantic-release.md)
 
-!!! attention
+⚠️ This is a one time activity. If a tag already exists in the repo this step is not required. If no tags exist proceed to read the next section.
 
-    This is a one time activity. If a tag already exists in the repo this step is not required. If no tags exist proceed to read the next section.
+⚠️  Why is this required?
 
-!!! question "Why is this required?"
-
-    Please see [Base release version](continuous-integration/semantic-release.md#base-release-version) documentation for rationale.
+   Please see [Base release version](continuous-integration/semantic-release.md#base-release-version) documentation for rationale.
 
 
    ```bash
@@ -30,6 +31,12 @@ The following instructions provide the setup required to optimally use this repo
    git push origin v0.1.0
    ```
 
+### Documentation generation via [mkdocs-material](continuous-integration/mkdocs-material.md)
+
+
+1. Enable `gh-pages` as per the [CI setup](continuous-integration/mkdocs-material.md#ci-setup) instructions.
+
+2. Update `site_name` field in `./mkdocs.yml` file.
 
 ### Get template repository updates (optional)
 

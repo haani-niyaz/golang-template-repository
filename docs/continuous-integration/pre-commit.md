@@ -15,7 +15,7 @@ Any detected failures will abort the commit.
 
 !!! tip
 
-    See supported hooks [here](https://pre-commit.com/hooks.html)
+    See supported hooks [here](https://pre-commit.com/hooks.html).
 
 ## CI setup
 
@@ -27,7 +27,7 @@ All hooks in `.pre-commit-config.yaml` will be executed via the pre-commit Githu
 
 ## Local setup
 
-```
+```bash
 pip install -u pre-commit
 ```
 
@@ -44,3 +44,9 @@ Running against all files instead of only stages files:
 ```
 pre-commit run --all-files
 ```
+
+## FAQ
+
+1. Do I have to run `pre-commit install` everytime I clone a repository?
+
+    Yes. However, you can automatically enable `pre-commit` to run when you clone a repository via [this](https://pre-commit.com/#automatically-enabling-pre-commit-on-repositories) link.
